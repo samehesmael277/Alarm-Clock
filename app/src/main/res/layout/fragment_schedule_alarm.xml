@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.scheduleAlarm.ScheduleAlarmFragment">
+
+    <TextView
+        android:id="@+id/tv_schedule_alarm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:fontFamily="@font/linlegrey"
+        android:paddingTop="@dimen/_5sdp"
+        android:text="@string/schedule_alarm"
+        android:textSize="@dimen/_40ssp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@id/iv_save"
+        app:layout_constraintStart_toEndOf="@id/iv_back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_alarm_title"
+        style="@style/TextInputLayoutStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:hint="@string/alarm_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_schedule_alarm">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_alarm_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/linlegrey"
+            android:inputType="text"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_time_picker"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_alarm_title">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.4"
+            android:fontFamily="@font/linlegrey"
+            android:text="@string/alarm_time"
+            android:textAlignment="center"
+            android:textSize="@dimen/_20ssp"
+            android:textStyle="bold" />
+
+        <TimePicker
+            android:id="@+id/time_picker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:timePickerMode="spinner" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_choose_alarm_tone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@drawable/bc_raduis"
+        android:fontFamily="@font/linlegrey"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingBottom="@dimen/_8sdp"
+        android:text="@string/choose_alarm_tone"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        app:drawableEndCompat="@drawable/ic_arrow_forward"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear_time_picker"
+        tools:ignore="UnusedAttribute"
+        tools:targetApi="m" />
+
+    <CheckBox
+        android:id="@+id/cb_recurring"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/linlegrey"
+        android:text="@string/recurring_alarm"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_choose_alarm_tone" />
+
+    <LinearLayout
+        android:id="@+id/linear_recurring_options"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cb_recurring">
+
+        <CheckBox
+            android:id="@+id/cb_saturday"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/linlegrey"
+            android:text="@string/sat"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/cb_sunday"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/linlegrey"
+            android:text="@string/sun"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/cb_monday"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/linlegrey"
+            android:text="@string/mon"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/cb_tuesday"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/linlegrey"
+            android:text="@string/tue"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_recurring_options_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear_recurring_options">
+
+        <CheckBox
+            android:id="@+id/cb_wednesday"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/linlegrey"
+            android:text="@string/wed"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/cb_thursday"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/linlegrey"
+            android:text="@string/thu"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/cb_friday"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/linlegrey"
+            android:text="@string/fri"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/iv_back"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@null"
+        android:contentDescription="@string/app_name"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:scaleType="center"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UnusedAttribute"
+        tools:targetApi="m" />
+
+    <ImageButton
+        android:id="@+id/iv_save"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:background="@null"
+        android:contentDescription="@string/app_name"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:scaleType="center"
+        android:src="@drawable/ic_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UnusedAttribute"
+        tools:targetApi="m" />
+
+    <com.tuyenmonkey.mkloader.MKLoader
+        android:id="@+id/mk_loader"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8"
+        app:mk_color="@color/black"
+        app:mk_type="ClassicSpinner" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

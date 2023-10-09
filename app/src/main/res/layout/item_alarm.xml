@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bc_raduis"
+    android:layout_marginHorizontal="@dimen/_10sdp"
+    android:layout_marginVertical="@dimen/_5sdp"
+    android:padding="@dimen/_4sdp">
+
+    <TextView
+        android:id="@+id/tv_alarm_oclock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="12:00"
+        android:textSize="@dimen/_40ssp"
+        android:textColor="@color/black"
+        android:padding="@dimen/_4sdp"
+        android:fontFamily="@font/digital_mono"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/alarm_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:fontFamily="@font/linlegrey"
+        android:textSize="@dimen/_20ssp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btn_delete_alarm"
+        app:layout_constraintStart_toEndOf="@id/tv_alarm_oclock"
+        app:layout_constraintTop_toTopOf="@id/tv_alarm_oclock"
+        tools:text="Alarm Title" />
+
+    <ImageView
+        android:id="@+id/iv_recurring_option"
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:src="@drawable/ic_arrow_repeat"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintTop_toBottomOf="@id/alarm_title"
+        app:layout_constraintStart_toEndOf="@id/tv_alarm_oclock"
+        app:tint="@color/black" />
+
+    <TextView
+        android:id="@+id/tv_days_recurring"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/linlegrey"
+        tools:text="SAT MON TUS SAT MON TUS TUS"
+        android:visibility="visible"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/toggle_button_alarm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_alarm_oclock" />
+
+    <ToggleButton
+        android:id="@+id/toggle_button_alarm"
+        style="@style/Widget.AppCompat.DrawerArrowToggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:drawableStart="@drawable/ic_alarm_clock"
+        android:text="@string/toggle_button"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_delete_alarm" />
+
+    <ImageButton
+        android:id="@+id/btn_delete_alarm"
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:background="@null"
+        android:contentDescription="@string/app_name"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:src="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/black"
+        tools:ignore="UnusedAttribute"
+        tools:targetApi="m" />
+    
+</androidx.constraintlayout.widget.ConstraintLayout>

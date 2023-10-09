@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeColor">@color/black</item>
+        <item name="boxStrokeWidthFocused">@dimen/_1sdp</item>
+        <item name="android:textColorHint">@color/black</item>
+        <item name="boxBackgroundColor">@color/grey_light</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/_8sdp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/_8sdp</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/_8sdp</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/_8sdp</item>
+        <item name="boxBackgroundMode">outline</item>
+        <item name="android:padding">@dimen/_4sdp</item>
+        <item name="android:textAppearance">@font/linlegrey</item>
+        <item name="hintTextAppearance">@font/linlegrey</item>
+    </style>
+</resources>

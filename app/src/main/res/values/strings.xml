@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Alarm Clock</string>
+    <string name="schedule_alarm">Schedule Alarm</string>
+    <string name="alarm_time">Alarm Time</string>
+    <string name="alarm_title">Alarm Title</string>
+    <string name="recurring_alarm">Recurring Alarm</string>
+    <string name="sat">Sat</string>
+    <string name="sun">Sun</string>
+    <string name="mon">Mon</string>
+    <string name="tue">Tue</string>
+    <string name="wed">Wed</string>
+    <string name="thu">Thu</string>
+    <string name="fri">Fri</string>
+    <string name="choose_alarm_tone">Choose Alarm Tone</string>
+    <string name="toggle_button">Toggle Button</string>
+    <string name="my_alarms">My Alarms</string>
+    <string name="no_alarms_found">No Alarms Found</string>
+    <string name="snooze">Snooze 10 Minute</string>
+    <string name="dismiss">Dismiss</string>
+</resources>
