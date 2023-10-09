@@ -39,7 +39,7 @@ This app was created during my internship at CodSoft Company.
 
 To use the Alarm Clock app, follow these steps:
 
-1. Clone this repository to your local machine using `git clone [https://github.com/samehesmael277/Alarm-Clock]`.
+1. Clone this repository to your local machine using `git clone https://github.com/samehesmael277/Alarm-Clock`.
 2. Open the project in Android Studio.
 3. Build and run the app on an Android emulator or physical device.
 
